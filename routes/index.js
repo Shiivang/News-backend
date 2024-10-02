@@ -6,7 +6,7 @@ const axios = require("axios");
 router.get('/', async function(req, res, next) {
   
   try {
-    const { search = '' , lang = 'en' ,  country = 'us' ,  max = '10', page = 1 } = req.query ;
+    const { search = 'Technology' , lang = 'en' ,  country = 'us' ,  max = '10', page = 1 } = req.query ;
     
     const response = await axios.get('https://gnews.io/api/v4/search',{
         params: {
